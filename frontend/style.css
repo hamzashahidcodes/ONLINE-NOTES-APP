@@ -1,0 +1,306 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: white;
+}
+
+/* Container */
+.container{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+}
+
+h1{
+    color: cyan;
+    margin-bottom: 30px;
+}
+
+/* Top Right Buttons */
+.top-right-buttons{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    z-index: 1000;
+}
+
+#theme-btn,
+.logout-btn{
+    width: 170px;
+    padding: 12px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#theme-btn{
+    background: cyan;
+    color: black;
+}
+
+.logout-btn{
+    background: #ff4d4d;
+    color: white;
+}
+
+#theme-btn:hover,
+.logout-btn:hover{
+    transform: scale(1.05);
+}
+
+/* Input Section */
+.note-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+input,
+textarea{
+    width: 70%;
+    padding: 14px;
+
+    border: none;
+    border-radius: 10px;
+
+    outline: none;
+}
+
+textarea{
+    height: 150px;
+    resize: vertical;
+}
+
+/* Select */
+select{
+    width: 70%;
+    padding: 14px;
+
+    border-radius: 12px;
+    border: 2px solid cyan;
+
+    background: #1e1e1e;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+select:hover{
+    box-shadow: 0 0 10px cyan;
+}
+
+/* Counter */
+.counter{
+    width: 70%;
+    text-align: right;
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* Buttons */
+button{
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: cyan;
+    color: black;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,255,255,0.4);
+}
+
+/* Search Box */
+.search-box{
+    width: 70%;
+
+    margin: 20px auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    background: #1e1e1e;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+    border: 1px solid cyan;
+}
+
+.search-box input{
+    flex: 1;
+
+    background: transparent;
+    color: white;
+
+    border: none;
+    outline: none;
+}
+
+/* Filter */
+#filter{
+    width: 70%;
+    margin: 15px auto;
+    display: block;
+}
+
+/* Notes */
+.note{
+    width: 70%;
+
+    margin: 25px auto;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+
+    transition: 0.3s;
+}
+
+.note:hover{
+    transform: scale(1.02);
+}
+
+.note h2{
+    margin-bottom: 10px;
+    color: white;
+}
+
+.note p{
+    line-height: 1.6;
+    color: white;
+}
+
+/* Note Date */
+.note-date{
+    display: block;
+    margin-top: 10px;
+
+    font-size: 13px;
+    color: #f0f0f0;
+}
+
+/* Category Badge */
+.category{
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+    background: rgba(255,255,255,0.2);
+}
+
+/* Note Colors */
+.note-blue{
+    background: linear-gradient(135deg,#2196F3,#1565C0);
+}
+
+.note-green{
+    background: linear-gradient(135deg,#4CAF50,#2E7D32);
+}
+
+.note-purple{
+    background: linear-gradient(135deg,#9C27B0,#6A1B9A);
+}
+
+.note-orange{
+    background: linear-gradient(135deg,#FF9800,#EF6C00);
+}
+
+.note-pink{
+    background: linear-gradient(135deg,#E91E63,#AD1457);
+}
+
+/* Category Borders */
+.study{
+    border-left: 6px solid #2196F3;
+}
+
+.work{
+    border-left: 6px solid #4CAF50;
+}
+
+.personal{
+    border-left: 6px solid #9C27B0;
+}
+
+/* Buttons Group */
+.btn-group{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.btn-group button{
+    padding: 8px 14px;
+}
+
+/* Light Mode */
+.light-mode{
+    background: #f4f4f4;
+    color: #222;
+}
+
+.light-mode h1{
+    color: #0097a7;
+}
+
+.light-mode input,
+.light-mode textarea,
+.light-mode select{
+    background: white;
+    color: black;
+}
+
+.light-mode .search-box{
+    background: white;
+    border: 1px solid #ccc;
+}
+
+.light-mode .search-box input{
+    color: black;
+}
+
+.light-mode .counter{
+    color: #444;
+}
