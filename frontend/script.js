@@ -8,16 +8,39 @@ import {
 
 import {
     collection,
-    addDoc
+    addDoc,
+    getDocs
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 
 let notes = JSON.parse(localStorage.getItem("notes")) || [];
+
+
+async function loadNotes(){
+
+    notes = [];
+
+    const querySnapshot =
+    await getDocs(collection(db, "notes"));
+
+    querySnapshot.forEach((doc) => {
+
+        notes.push({
+            id: doc.id,
+            ...doc.data()
+        });
+
+    });
+
+    displayNotes();
+}
+
+
 
 /* =========================
    INIT
 ========================= */
 window.addEventListener("DOMContentLoaded", () => {
-    displayNotes();
+    loadNotes();
     setupSearch();
     setupFilter();
     setupWordCounter();
@@ -59,7 +82,7 @@ document.getElementById("category").value;
 
         await addDoc(collection(db, "notes"), note);
 
-        displayNotes();
+        await loadNotes();
 
         document.getElementById("title").value = "";
         document.getElementById("content").value = "";

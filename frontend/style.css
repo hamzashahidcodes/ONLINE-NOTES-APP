@@ -8,7 +8,8 @@ body{
 
 /* Container */
 .container{
-    width: 80%;
+    max-width: 1200px;
+    width: 90%;
     margin: auto;
     text-align: center;
     margin-top: 40px;
@@ -21,16 +22,12 @@ h1{
 
 /* Top Right Buttons */
 .top-right-buttons{
-    position: fixed;
-    top: 20px;
-    right: 20px;
-
     display: flex;
-    flex-direction: column;
-
+    justify-content: center;
+    align-items: center;
     gap: 12px;
-
-    z-index: 1000;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
 }
 
 #theme-btn,
@@ -72,35 +69,28 @@ h1{
 
 input,
 textarea{
-    width: 70%;
+    width: 100%;
+    max-width: 850px;
     padding: 14px;
-
     border: none;
     border-radius: 10px;
-
     outline: none;
-}
-
-textarea{
-    height: 150px;
-    resize: vertical;
+    box-sizing: border-box;
 }
 
 /* Select */
 select{
-    width: 70%;
+    width: 100%;
+    max-width: 850px;
     padding: 14px;
-
     border-radius: 12px;
     border: 2px solid cyan;
-
     background: #1e1e1e;
     color: white;
-
     font-size: 16px;
     font-weight: bold;
-
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 select:hover{
@@ -138,21 +128,17 @@ button:hover{
 
 /* Search Box */
 .search-box{
-    width: 70%;
-
+    width: 100%;
+    max-width: 850px;
     margin: 20px auto;
-
     display: flex;
     align-items: center;
-
     gap: 10px;
-
     background: #1e1e1e;
-
     padding: 12px 15px;
-
     border-radius: 10px;
     border: 1px solid cyan;
+    box-sizing: border-box;
 }
 
 .search-box input{
@@ -167,24 +153,22 @@ button:hover{
 
 /* Filter */
 #filter{
-    width: 70%;
+    width: 100%;
+    max-width: 850px;
     margin: 15px auto;
     display: block;
 }
 
 /* Notes */
 .note{
-    width: 70%;
-
+    width: 100%;
+    max-width: 850px;
     margin: 25px auto;
-
     padding: 20px;
-
     border-radius: 15px;
-
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-
     transition: 0.3s;
+    box-sizing: border-box;
 }
 
 .note:hover{
@@ -303,4 +287,63 @@ button:hover{
 
 .light-mode .counter{
     color: #444;
+}
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px){
+
+    .container{
+        width: 95%;
+        margin-top: 20px;
+    }
+
+    h1{
+        font-size: 28px;
+    }
+
+    .top-right-buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #theme-btn,
+    .logout-btn{
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .btn-group{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-group button{
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .note{
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px){
+
+    h1{
+        font-size: 24px;
+    }
+
+    .note h2{
+        font-size: 20px;
+    }
+
+    .note p{
+        font-size: 14px;
+    }
+
+    button{
+        font-size: 13px;
+    }
 }
