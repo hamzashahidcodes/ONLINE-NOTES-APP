@@ -550,13 +550,14 @@ ${note.content}`;
 }
 async function logout() {
 
+
     try {
 
         await signOut(auth);
 
         alert("Logged Out Successfully");
 
-        window.location.href = "/frontend/login/login.html";
+        window.location.href = "/login/login.html";
 
     } catch(error) {
 

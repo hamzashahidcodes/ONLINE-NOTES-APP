@@ -1,5 +1,6 @@
-import { auth }
-from "../firebase.js";
+/*import { auth }
+from "../firebase.js";*/
+import { auth } from "../frontend/firebase.js";
 
 import {
     signInWithEmailAndPassword
@@ -24,8 +25,7 @@ async function login(){
 
         alert("Login Successful");
 
-        window.location.href =
-"../index.html";
+        window.location.href = "../frontend/index.html";
 
     }
 
