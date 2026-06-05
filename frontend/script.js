@@ -556,8 +556,7 @@ async function logout() {
 
         alert("Logged Out Successfully");
 
-        window.location.href =
-        "../login/login.html";
+        window.location.href = "/frontend/login/login.html";
 
     } catch(error) {
 
